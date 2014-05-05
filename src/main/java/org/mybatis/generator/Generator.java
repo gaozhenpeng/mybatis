@@ -46,13 +46,36 @@ public class Generator {
 		   context.setTargetRuntime("MyBatis3");
 		   
 		   //<plugin>
-		   PluginConfiguration  pluginConfiguration = new PluginConfiguration();
-		   pluginConfiguration.setConfigurationType("org.mybatis.generator.myplugins.ToStringPlugin");
-		   pluginConfiguration.setConfigurationType("org.mybatis.generator.plugins.SerializablePlugin");
-		   pluginConfiguration.setConfigurationType("org.mybatis.generator.plugins.RenameExampleClassPlugin");
-		   pluginConfiguration.addProperty("searchString", "Example$");
-		   pluginConfiguration.addProperty("replaceString", "Query");
-		   context.addPluginConfiguration(pluginConfiguration);
+		   PluginConfiguration  serializablePlugin = new PluginConfiguration();
+		   serializablePlugin.setConfigurationType("org.mybatis.generator.plugins.SerializablePlugin");
+		   context.addPluginConfiguration(serializablePlugin);
+		  
+		   PluginConfiguration  cachePlugin = new PluginConfiguration();
+		   cachePlugin.setConfigurationType("org.mybatis.generator.myplugins.CachePlugin");
+		   cachePlugin.addProperty("cache_size", "1024");
+		   cachePlugin.addProperty("cache_eviction", "FIFO");
+		   cachePlugin.addProperty("cache_flushInterval", "60000");
+		   context.addPluginConfiguration(cachePlugin);
+		   
+		   PluginConfiguration  renameExampleClassPlugin = new PluginConfiguration();
+		   renameExampleClassPlugin.setConfigurationType("org.mybatis.generator.plugins.RenameExampleClassPlugin");
+		   renameExampleClassPlugin.addProperty("searchString", "Example$");
+		   renameExampleClassPlugin.addProperty("replaceString", "Query");
+		   context.addPluginConfiguration(renameExampleClassPlugin);
+		   
+		   PluginConfiguration  toStringPlugin = new PluginConfiguration();
+		   toStringPlugin.setConfigurationType("org.mybatis.generator.myplugins.ToStringPlugin");
+		   context.addPluginConfiguration(toStringPlugin);
+		   
+		   PluginConfiguration  equalsHashCodePlugin = new PluginConfiguration();
+		   equalsHashCodePlugin.setConfigurationType("org.mybatis.generator.plugins.EqualsHashCodePlugin");
+		   context.addPluginConfiguration(equalsHashCodePlugin);
+		   
+		   PluginConfiguration  rowBoundsPlugin = new PluginConfiguration();
+		   rowBoundsPlugin.setConfigurationType("org.mybatis.generator.plugins.RowBoundsPlugin");
+		   context.addPluginConfiguration(rowBoundsPlugin);
+		   
+		   
 		   
 		   // <commentGenerator>
 		   CommentGeneratorConfiguration commentGeneratorConfiguration = new CommentGeneratorConfiguration();
