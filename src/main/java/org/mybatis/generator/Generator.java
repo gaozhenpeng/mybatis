@@ -76,6 +76,11 @@ public class Generator {
 		   context.addPluginConfiguration(rowBoundsPlugin);
 		   
 		   
+		   PluginConfiguration  insertBatchPlugin = new PluginConfiguration();
+		   insertBatchPlugin.setConfigurationType("org.mybatis.generator.myplugins.InsertBatchPlugin");
+		   context.addPluginConfiguration(insertBatchPlugin);
+		   
+		   
 		   
 		   // <commentGenerator>
 		   CommentGeneratorConfiguration commentGeneratorConfiguration = new CommentGeneratorConfiguration();
