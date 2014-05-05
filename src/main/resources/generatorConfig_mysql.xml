@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<properties resource="application.properties" />
+	<classPathEntry location="E:\mysql-connector-java-5.1.22.jar" />
+	<context id="H2Tables" targetRuntime="MyBatis3"
+		defaultModelType="flat">
+		
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
+		<plugin type="org.mybatis.generator.myplugins.CachePlugin">
+			<property name="cache_size" value="1024" />
+			<property name="cache_eviction" value="FIFO" />
+			<property name="cache_flushInterval" value="60000" />
+		</plugin>
+		<plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
+			<property name="searchString" value="Example$" />
+			<property name="replaceString" value="Query" />
+		</plugin>
+
+		<plugin type="org.mybatis.generator.myplugins.ToStringPlugin"></plugin>
+		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"></plugin>
+        <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>
+        <plugin type="org.mybatis.generator.myplugins.IbatisServicePlugin" >
+           <property name="targetProject" value="${targetProject}" />
+           <property name="servicePack" value="${targetPackage}.service" />
+           
+        </plugin>
+        <!-- 支持区分大小写等搜索 -->
+        <!-- <plugin type="org.mybatis.generator.plugins.CaseInsensitiveLikePlugin"></plugin> -->
+        
+		<commentGenerator>
+			<property name="suppressAllComments" value="false" /><!-- 如果设置为true 则不生成注释  -->
+			<property name="suppressDate" value="true" /><!-- 此属性用于指定在生成的注释是否将包括MBG代时间戳 -->
+		</commentGenerator>
+		
+		<jdbcConnection driverClass="${jdbc.driver}"
+			connectionURL="${jdbc.url}" userId="${jdbc.username}" password="${jdbc.password}" />
+
+		<javaModelGenerator targetPackage="${targetPackage}.domain"
+			targetProject="${targetProject}" >
+             <property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="${targetPackage}.repository.mapper"
+			targetProject="${targetProject}" />
+
+		<javaClientGenerator targetPackage="${targetPackage}.repository"
+			targetProject="${targetProject}" type="XMLMAPPER">
+			<property name="enableSubPackages" value="false" />
+			<property name="methodNameCalculator" value="extended" />
+			<property name="rootInterface" value="com.nercis.isscp.dbengine.repository.CommonMapper"/>
+		</javaClientGenerator>
+		
+
+		<!-- <table tableName="cloudtv_task_result" domainObjectName="TaskResult"> </table> 
+			<table tableName="cloudtv_task_detail" domainObjectName="TaskDetail"> </table> 
+			<table tableName="cloudtv_sample" domainObjectName="Sample"> </table>
+			<table tableName="cloudtv_task_virus_engine" domainObjectName="TaskVirusEngine"></table> 
+			<table tableName="cloudtv_task_virus" domainObjectName="TaskVirus"> </table> 
+			<table tableName="cloudtv_rules" domainObjectName="Rules"> </table> 
+			<table tableName="cloudtv_task_dynamic_hardwareresources" domainObjectName="TaskDynamicHard"> </table> 
+			<table tableName="cloudtv_task_static_checkresult" domainObjectName="TaskStaticResult"> </table> 
+			<table tableName="cloudtv_task" domainObjectName="Task" ></table>
+		    <table tableName="cloudtv_plat_dict" domainObjectName="PlatDict" ></table>
+		    
+		   <table tableName="cloudtv_purview" domainObjectName="Purview"></table>
+		   <table tableName="cloudtv_sample_purview" domainObjectName="SamplePurview"></table>
+		   <table tableName="cloudtv_task_static_eqcheckresult" domainObjectName="TaskStaticEqResult"></table>
+		  
+		   
+		   <table tableName="cloudtv_task_static_apicheck" domainObjectName="TaskStaticApi"></table>
+		   <table tableName="cloudtv_task_static_eqcheck_apicheck" domainObjectName="TaskStaticEqApi"></table>
+		   
+		    --> 
+		    
+		    <table tableName="user" domainObjectName="User"></table>
+	</context>
+
+</generatorConfiguration>
