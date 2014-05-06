@@ -80,6 +80,10 @@ public class Generator {
 		   insertBatchPlugin.setConfigurationType("org.mybatis.generator.myplugins.InsertBatchPlugin");
 		   context.addPluginConfiguration(insertBatchPlugin);
 		   
+		   PluginConfiguration  deleteBatchPlugin = new PluginConfiguration();
+		   deleteBatchPlugin.setConfigurationType("org.mybatis.generator.myplugins.DeleteBatchPlugin");
+		   context.addPluginConfiguration(deleteBatchPlugin);
+		   
 		   
 		   
 		   // <commentGenerator>
@@ -122,8 +126,8 @@ public class Generator {
 		   TableConfiguration tc = new TableConfiguration(context);
 		   tc.setTableName("user");
 		   tc.setDomainObjectName("User");
-		   IgnoredColumn ignoredColumn = new IgnoredColumn("id");
-		   tc.addIgnoredColumn(ignoredColumn);
+		   //IgnoredColumn ignoredColumn = new IgnoredColumn("id");已自动扫描添加了key，自己指定后，没有delbykey的方法
+		   //tc.addIgnoredColumn(ignoredColumn);
 		   
 		   tc.setSelectByExampleStatementEnabled(Boolean.TRUE);
 		   tc.setSelectByPrimaryKeyStatementEnabled(Boolean.TRUE);
@@ -132,7 +136,7 @@ public class Generator {
 		   tc.setInsertStatementEnabled(Boolean.TRUE);
 		   tc.setDeleteByExampleStatementEnabled(Boolean.TRUE);
 		   tc.setDeleteByPrimaryKeyStatementEnabled(Boolean.TRUE);
-		   tc.setDelimitIdentifiers(Boolean.TRUE);
+		   //tc.setDelimitIdentifiers(Boolean.TRUE);
 		   
 		   context.addTableConfiguration(tc);
 		   

@@ -7,24 +7,26 @@
 		defaultModelType="flat">
 		
 		<plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
-		<plugin type="org.mybatis.generator.myplugins.CachePlugin">
-			<property name="cache_size" value="1024" />
-			<property name="cache_eviction" value="FIFO" />
-			<property name="cache_flushInterval" value="60000" />
-		</plugin>
 		<plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
 			<property name="searchString" value="Example$" />
 			<property name="replaceString" value="Query" />
 		</plugin>
-
-		<plugin type="org.mybatis.generator.myplugins.ToStringPlugin"></plugin>
 		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"></plugin>
         <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>
+        <!-- 自定义的plugin -->
         <plugin type="org.mybatis.generator.myplugins.IbatisServicePlugin" >
            <property name="targetProject" value="${targetProject}" />
            <property name="servicePack" value="${targetPackage}.service" />
-           
         </plugin>
+        <plugin type="org.mybatis.generator.myplugins.CachePlugin">
+			<property name="cache_size" value="1024" />
+			<property name="cache_eviction" value="FIFO" />
+			<property name="cache_flushInterval" value="60000" />
+		</plugin>
+        <plugin type="org.mybatis.generator.myplugins.ToStringPlugin"></plugin>
+        <plugin type="org.mybatis.generator.myplugins.InsertBatchPlugin"></plugin>
+        <plugin type="org.mybatis.generator.myplugins.DeleteBatchPlugin"></plugin>
+        
         <!-- 支持区分大小写等搜索 -->
         <!-- <plugin type="org.mybatis.generator.plugins.CaseInsensitiveLikePlugin"></plugin> -->
         
