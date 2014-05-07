@@ -3,29 +3,28 @@
  */
 package org.mybatis.generator.myplugins;
 
-import static org.mybatis.generator.internal.util.StringUtility.stringHasValue;
-
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import org.mybatis.generator.api.IntrospectedColumn;
 import org.mybatis.generator.api.IntrospectedTable;
 import org.mybatis.generator.api.PluginAdapter;
-import org.mybatis.generator.api.dom.OutputUtilities;
-import org.mybatis.generator.api.dom.java.FullyQualifiedJavaType;
 import org.mybatis.generator.api.dom.xml.Attribute;
 import org.mybatis.generator.api.dom.xml.Document;
 import org.mybatis.generator.api.dom.xml.TextElement;
 import org.mybatis.generator.api.dom.xml.XmlElement;
 import org.mybatis.generator.codegen.mybatis3.MyBatis3FormattingUtilities;
-import org.mybatis.generator.config.GeneratedKey;
-import org.mybatis.generator.internal.util.StringUtility;
-import org.mybatis.generator.myplugins.CachePlugin.CacheProperty;
 
 /**
- * @author 振鹏
- *
+ * 
+ * <B>文件名称：</B>DeleteBatchPlugin.java<BR>
+ * <B>文件描述：</B><BR>
+ * <BR>mybatis generator 批量删除插件
+ * <B>版权声明：</B>(C)2014-2015<BR>
+ * <B>公司部门：</B>研究部 <BR>
+ * <B>创建时间：</B>2014年5月7日<BR>
+ * 
+ * @author 高振鹏 gaozhenpeng@aliyun.com
+ * @version
  */
 public class DeleteBatchPlugin extends PluginAdapter{
 

@@ -54,27 +54,7 @@
 		</javaClientGenerator>
 		
 
-		<!-- <table tableName="cloudtv_task_result" domainObjectName="TaskResult"> </table> 
-			<table tableName="cloudtv_task_detail" domainObjectName="TaskDetail"> </table> 
-			<table tableName="cloudtv_sample" domainObjectName="Sample"> </table>
-			<table tableName="cloudtv_task_virus_engine" domainObjectName="TaskVirusEngine"></table> 
-			<table tableName="cloudtv_task_virus" domainObjectName="TaskVirus"> </table> 
-			<table tableName="cloudtv_rules" domainObjectName="Rules"> </table> 
-			<table tableName="cloudtv_task_dynamic_hardwareresources" domainObjectName="TaskDynamicHard"> </table> 
-			<table tableName="cloudtv_task_static_checkresult" domainObjectName="TaskStaticResult"> </table> 
-			<table tableName="cloudtv_task" domainObjectName="Task" ></table>
-		    <table tableName="cloudtv_plat_dict" domainObjectName="PlatDict" ></table>
-		    
-		   <table tableName="cloudtv_purview" domainObjectName="Purview"></table>
-		   <table tableName="cloudtv_sample_purview" domainObjectName="SamplePurview"></table>
-		   <table tableName="cloudtv_task_static_eqcheckresult" domainObjectName="TaskStaticEqResult"></table>
-		  
-		   
-		   <table tableName="cloudtv_task_static_apicheck" domainObjectName="TaskStaticApi"></table>
-		   <table tableName="cloudtv_task_static_eqcheck_apicheck" domainObjectName="TaskStaticEqApi"></table>
-		   
-		    --> 
-		    
+		
 		    <table tableName="user" domainObjectName="User"></table>
 	</context>
 

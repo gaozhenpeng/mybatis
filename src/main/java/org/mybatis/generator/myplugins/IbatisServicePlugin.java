@@ -16,15 +16,16 @@ import org.mybatis.generator.api.dom.java.Method;
 import org.mybatis.generator.api.dom.java.TopLevelClass;
 
 /**
+ * 
  * <B>文件名称：</B>IbatisServicePlugin.java<BR>
  * <B>文件描述：</B><BR>
  * <BR>
- * <B>版权声明：</B>(C)2013-2015<BR>
- * <B>公司部门：</B>NERCIS 基础研究部 <BR>
- * <B>创建时间：</B>2013年11月15日<BR>
+ * <B>版权声明：</B>(C)2014-2015<BR>
+ * <B>公司部门：</B>研究部 <BR>
+ * <B>创建时间：</B>2014年5月7日<BR>
  * 
- * @author 高振鹏 gaozhp@nercis.ac.cn
- * @version 
+ * @author 高振鹏 gaozhenpeng@aliyun.com
+ * @version
  */
 public class IbatisServicePlugin  extends PluginAdapter {
 
@@ -49,10 +50,10 @@ public class IbatisServicePlugin  extends PluginAdapter {
             + '\r'+"* <B>文件描述：</B><BR>"
             + '\r'+"* <BR>"
             + '\r'+"* <B>版权声明：</B>(C)2013-2015<BR>"
-            + '\r'+"* <B>公司部门：</B>NERCIS 基础研究部 <BR>"
+            + '\r'+"* <B>公司部门：</B> 基础研究部 <BR>"
             + '\r'+"* <B>创建时间：</B>"+format.format(new Date())+"<BR>"
             + '\r'+"*"
-            + '\r'+"* @author 高振鹏 gaozhp@nercis.ac.cn"
+            + '\r'+"* @author 高振鹏 gaozhenpeng@aliyun.com"
             + '\r'+"* @version 1.0 "
             + '\r'+"*/";
     @Override

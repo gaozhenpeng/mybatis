@@ -33,12 +33,21 @@ import org.mybatis.generator.api.dom.xml.Attribute;
 import org.mybatis.generator.api.dom.xml.Document;
 import org.mybatis.generator.api.dom.xml.XmlElement;
 
+
 /**
- * This plugin will add selectByExample methods that include rowBounds
+ * 
+ * <B>文件名称：</B>RowBoundsPlugin.java<BR>
+ * <B>文件描述：</B><BR>
+ * <BR> This plugin will add selectByExample methods that include rowBounds
  * parameters to the generated mapper interface.  This plugin is only
  * valid for MyBatis3.
+ * <B>版权声明：</B>(C)2014-2015<BR>
+ * <B>公司部门：</B>研究部 <BR>
+ * <B>创建时间：</B>2014年5月7日<BR>
  * 
  * @author Jeff Butler
+ * @author 高振鹏 gaozhenpeng@aliyun.com
+ * @version
  */
 public class RowBoundsPlugin extends PluginAdapter {
     

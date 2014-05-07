@@ -9,8 +9,12 @@ import org.mybatis.generator.api.dom.xml.Document;
 import org.mybatis.generator.api.dom.xml.XmlElement;
 import org.mybatis.generator.internal.util.StringUtility;
 
+
 /**
- * This plugin adds a cache element to generated sqlMaps.  This plugin
+ * 
+ * <B>文件名称：</B>CachePlugin.java<BR>
+ * <B>文件描述：</B><BR>
+ * <BR>  This plugin adds a cache element to generated sqlMaps.  This plugin
  * is for MyBatis3 targeted runtimes only.  The plugin accepts the
  * following properties (all are optional):
  * 
@@ -25,9 +29,15 @@ import org.mybatis.generator.internal.util.StringUtility;
  * element.  All properties can be specified at the table level, or on the
  * plugin element.  The property on the table element will override any
  * property on the plugin element.
+ * <B>版权声明：</B>(C)2014-2015<BR>
+ * <B>公司部门：</B>研究部 <BR>
+ * <B>创建时间：</B>2014年5月7日<BR>
  * 
  * @author Jason Bennett
  * @author Jeff Butler
+ * 
+ * @author 高振鹏 gaozhenpeng@aliyun.com
+ * @version
  */
 public class CachePlugin extends PluginAdapter {
     public enum CacheProperty {

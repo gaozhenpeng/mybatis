@@ -12,14 +12,17 @@ import org.mybatis.generator.api.dom.java.Parameter;
 import org.mybatis.generator.api.dom.java.TopLevelClass;
 
 /**
- * Adds "selectOneByExample" method to the appropriate Mapper interface returning exactly one object instance.<br/>
+ * 
+ * <B>文件名称：</B>SelectOneByExamplePlugin.java<BR>
+ * <B>文件描述：</B><BR>
+ * <BR> Adds "selectOneByExample" method to the appropriate Mapper interface returning exactly one object instance.<br/>
  * Example configuration:<br/>
  * <tt>
  * <pre>
  * &lt;generatorConfiguration&gt;
  *  &lt;context ...&gt;
  *
- *      &lt;plugin type="com.google.code.mybatis.generator.plugins.SelectOneByExamplePlugin"/&gt;
+ *      &lt;plugin type="org.mybatis.generator.myplugins.SelectOneByExamplePlugin"/&gt;
  *      ...
  *
  *  &lt;/context&gt;
@@ -30,8 +33,12 @@ import org.mybatis.generator.api.dom.java.TopLevelClass;
  * Default: <strong>selectOneByExample</strong></li> <li><strong>excludeClassNamesRegexp</strong> (optional): classes to
  * exclude from generation as regular expression. Default: none</li> </ul>
  *
- * @author Maxim Kalina
- * @version $Id$
+ * <B>版权声明：</B>(C)2014-2015<BR>
+ * <B>公司部门：</B>研究部 <BR>
+ * <B>创建时间：</B>2014年5月7日<BR>
+ * 
+ * @author 高振鹏 gaozhenpeng@aliyun.com
+ * @version
  */
 public class SelectOneByExamplePlugin extends PluginAdapter {
 
