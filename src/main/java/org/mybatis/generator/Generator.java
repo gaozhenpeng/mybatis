@@ -22,14 +22,14 @@ import org.mybatis.generator.internal.DefaultShellCallback;
 
 /**
  * 
- * <B>ÎÄ¼þÃû³Æ£º</B>Generator.java<BR>
- * <B>ÎÄ¼þÃèÊö£º</B><BR>
- * <BR> Í¨¹ýjavaÀàÊµÏÖmybatis ´úÂë
- * <B>°æÈ¨ÉùÃ÷£º</B>(C)2014-2015<BR>
- * <B>¹«Ë¾²¿ÃÅ£º</B>ÑÐ¾¿²¿ <BR>
- * <B>´´½¨Ê±¼ä£º</B>2014Äê5ÔÂ7ÈÕ<BR>
+ * <B>ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½Æ£ï¿½</B>Generator.java<BR>
+ * <B>ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</B><BR>
+ * <BR> Í¨ï¿½ï¿½javaï¿½ï¿½Êµï¿½ï¿½mybatis ï¿½ï¿½ï¿½ï¿½
+ * <B>ï¿½ï¿½È¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</B>(C)2014-2015<BR>
+ * <B>ï¿½ï¿½Ë¾ï¿½ï¿½ï¿½Å£ï¿½</B>ï¿½Ð¾ï¿½ï¿½ï¿½ <BR>
+ * <B>ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£º</B>2014ï¿½ï¿½5ï¿½ï¿½7ï¿½ï¿½<BR>
  * 
- * @author ¸ßÕñÅô gaozhenpeng@aliyun.com
+ * @author ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ gaozhenpeng@aliyun.com
  * @version
  */
 public class Generator {
@@ -43,7 +43,7 @@ public class Generator {
 		   String userId="root"; //${jdbc.username}
 		   String password="master"; //${jdbc.password}
 		   
-		   String targetPackage="com.nercis.isscp.dbengine"; //${targetPackage}
+		   String targetPackage="com.mybatis.gen.dbengine"; //${targetPackage}
 		   String targetProject="E:\\myworkspace\\mybatis-test\\src\\main\\java"; //${targetProject}
 		   
 		   String configurationType="XMLMAPPER"; 
@@ -133,7 +133,7 @@ public class Generator {
 		   TableConfiguration tc = new TableConfiguration(context);
 		   tc.setTableName("user");
 		   tc.setDomainObjectName("User");
-		   //IgnoredColumn ignoredColumn = new IgnoredColumn("id");ÒÑ×Ô¶¯É¨ÃèÌí¼ÓÁËkey£¬×Ô¼ºÖ¸¶¨ºó£¬Ã»ÓÐdelbykeyµÄ·½·¨
+		   //IgnoredColumn ignoredColumn = new IgnoredColumn("id");ï¿½ï¿½ï¿½Ô¶ï¿½É¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½keyï¿½ï¿½ï¿½Ô¼ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½delbykeyï¿½Ä·ï¿½ï¿½ï¿½
 		   //tc.addIgnoredColumn(ignoredColumn);
 		   
 		   tc.setSelectByExampleStatementEnabled(Boolean.TRUE);
