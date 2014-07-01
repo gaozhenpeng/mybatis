@@ -50,7 +50,7 @@
 			targetProject="${targetProject}" type="XMLMAPPER">
 			<property name="enableSubPackages" value="false" />
 			<property name="methodNameCalculator" value="extended" />
-			<property name="rootInterface" value="com.nercis.isscp.dbengine.repository.CommonMapper"/>
+			<property name="rootInterface" value="${targetPackage}.CommonMapper"/>
 		</javaClientGenerator>
 		
 
